@@ -4,6 +4,7 @@
 import os
 import random
 import platform
+import time
 
 from data.questions import QUESTIONS
 from data.answers import ANSWERS
@@ -27,6 +28,7 @@ def main():
 
     answered_questions = list()
 
+    start = time.time()
     # Play quiz
     while 1337:
 
@@ -58,7 +60,7 @@ def main():
         while invalid_input:
             try:
                 answer = input('--> ')
-                if answer == 'q':
+                if answer.lower() == 'q':
                     exit(0)
                 val = int(answer)-1
             except ValueError:
@@ -83,7 +85,7 @@ def main():
 
         if len(answered_questions) == total_questions:
             percent = int(correct_counter / (correct_counter+incorrect_counter) * 100)
-            fancy_print('You finished all the questions with ' + str(correct_counter) + '/' + str(correct_counter+incorrect_counter) + ' correct answers. ('+ str(percent) + '%)')
+            fancy_print('You finished in ' + get_time_string(time.time() - start) + ' with ' + str(correct_counter) + '/' + str(correct_counter+incorrect_counter) + ' correct answers. ('+ str(percent) + '%)')
             break
 
 def fancy_print(str):
@@ -92,6 +94,11 @@ def fancy_print(str):
     print('╔' + line + '╗')
     print('║ ~ ' + str + ' ~ ║')
     print('╚' + line + '╝')
+
+def get_time_string(seconds):
+    m, s = divmod(seconds, 60)
+    h, m = divmod(m, 60)
+    return "%02d:%02d:%02d" % (h, m, s)
     
 
 if __name__ == '__main__':
