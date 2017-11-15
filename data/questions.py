@@ -19,9 +19,7 @@ QUESTIONS = {
         "SOAP service",
         "Classic ASP project",
         "REST service"
-    ]
-}
-"""
+    ],
     'A REST service for a Learning Management System has received a HTTP POST request, to create a new instance of a course. What is the most logical status code returned from the service, assuming the course instance can be properly created?': [
         '200',
         '204',
@@ -258,4 +256,3 @@ QUESTIONS = {
         'Receiver'
     ]
 }
-"""

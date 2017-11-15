@@ -6,10 +6,7 @@ ANSWERS = {
     "A full-blown REST service has the following characteristics, except for one. Which one is NOT considered one of the main characteristics of a REST service?":
         "JSON data format",
     "A web service with a single URL which only accepts a HTTP POST request, receives input on XML format and returns XML is probably a:":
-        "SOAP service"
-}
-
-"""
+        "SOAP service",
     'A REST service for a Learning Management System has received a HTTP POST request, to create a new instance of a course. What is the most logical status code returned from the service, assuming the course instance can be properly created?': 
         '201',
     'What is the preferred method when requesting data in a given format from a web service?':
@@ -84,4 +81,3 @@ ANSWERS = {
     'When using RabbitMQ, what do we call the code which receives messages from a message queue?':
         'Consumer'
 }
-"""

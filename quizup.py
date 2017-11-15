@@ -1,7 +1,8 @@
 
 import random
-from questions import QUESTIONS
-from answers import ANSWERS
+
+from data.questions import QUESTIONS
+from data.answers import ANSWERS
 
 def main():
 
