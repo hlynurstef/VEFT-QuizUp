@@ -85,7 +85,21 @@ def main():
 
         if len(answered_questions) == total_questions:
             percent = int(correct_counter / (correct_counter+incorrect_counter) * 100)
-            fancy_print('You finished in ' + get_time_string(time.time() - start) + ' with ' + str(correct_counter) + '/' + str(correct_counter+incorrect_counter) + ' correct answers. ('+ str(percent) + '%)')
+            elapsed_time = time.time() - start
+            fancy_print('You finished in ' + get_time_string(elapsed_time) + ' with ' + str(correct_counter) + '/' + str(correct_counter+incorrect_counter) + ' correct answers. ('+ str(percent) + '%)')
+            if percent == 100:
+                fancy_print('Such score, very knowledge!')
+            elif percent >= 90:
+                fancy_print('So close, yet so far away...')
+            elif percent >= 70:
+                fancy_print('I know you can do better than that!')
+            elif percent >= 50:
+                fancy_print('Just over halfway there!')
+            elif percent >= 30:
+                fancy_print("Let's not speak of this score to anyone...")
+            else:
+                fancy_print("A monkey could've gotten a better score than that...")
+            
             break
 
 def fancy_print(str):
