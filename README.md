@@ -10,3 +10,13 @@
 ```
 python quizup.py
 ```
+
+or
+
+```
+python3 quizup.py
+```
+
+## Pull requests?
+
+Pull requests are welcome!

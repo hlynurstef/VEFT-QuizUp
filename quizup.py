@@ -22,7 +22,7 @@ def main():
     total_questions = len(ANSWERS)
     fancy_print('Welcome to VEFT QuizUp!')
     print('There are a total of ' + str(total_questions) + ' questions in this quiz!')
-    print('Quit at any time by entering any character or an unavailable integer.')
+    print('To quit type "q" or ctrl+c')
     print('Good luck!\n')
 
     answered_questions = list()
