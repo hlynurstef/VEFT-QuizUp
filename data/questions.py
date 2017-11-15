@@ -69,10 +69,10 @@ QUESTIONS = {
         '303'
     ],
     'Under what circumstances should an API method return HTTP status code 401?': [
-        'When the client HAS provided authentication data, but the given user doesn´t have permission to perform the given action'
-        'When the client has issued a request for a method which doesn´t return any content, such as a DELETE method'
-        'When the client has made some unspecified mistake in the request, i.e. could be a missing property value when creating a resource'
-        'When the server is a teapot'
+        'When the client HAS provided authentication data, but the given user doesn´t have permission to perform the given action',
+        'When the client has issued a request for a method which doesn´t return any content, such as a DELETE method',
+        'When the client has made some unspecified mistake in the request, i.e. could be a missing property value when creating a resource',
+        'When the server is a teapot',
         'When the client has not provided any authentication data, but the method requires it'
     ],
     'A DTO class (Data Transfer Object) is a class which:': [

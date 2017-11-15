@@ -1,10 +1,20 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 
+import os
 import random
+import platform
 
 from data.questions import QUESTIONS
 from data.answers import ANSWERS
 
 def main():
+
+    # Set the proper command for clearing the screen based on OS
+    if platform.system() == 'Windows':
+        clear = 'cls'
+    else:
+        clear = 'clear'
 
     correct_counter = 0
     incorrect_counter = 0
@@ -44,16 +54,21 @@ def main():
             print(str(counter) + ':', option)
             counter += 1
 
-        answer = input('--> ')
+        invalid_input = True
+        while invalid_input:
+            try:
+                answer = input('--> ')
+                if answer == 'q':
+                    exit(0)
+                val = int(answer)-1
+            except ValueError:
+                continue
 
-        try:
-            val = int(answer)-1
-        except ValueError:
-            break
-
-        if val >= len(options):
-            break
+            if val in range(len(options)):
+                invalid_input = False
         
+        os.system(clear)
+
         if options[val] == correct_answer:
             correct_counter += 1
             percent = int((correct_counter / (correct_counter+incorrect_counter)) * 100)
